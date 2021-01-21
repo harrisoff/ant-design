@@ -1,7 +1,9 @@
 import React from 'react';
-import { mount, ReactWrapper, HTMLAttributes } from 'enzyme';
-import ResizeObserverImpl from 'rc-resize-observer';
-import Affix, { AffixProps, AffixState } from '..';
+import type { ReactWrapper, HTMLAttributes } from 'enzyme';
+import { mount } from 'enzyme';
+import type ResizeObserverImpl from 'rc-resize-observer';
+import type { AffixProps, AffixState } from '..';
+import Affix from '..';
 import { getObserverEntities } from '../utils';
 import Button from '../../button';
 import rtlTest from '../../../tests/shared/rtlTest';

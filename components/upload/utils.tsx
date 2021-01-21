@@ -1,4 +1,4 @@
-import { RcFile, UploadFile } from './interface';
+import type { RcFile, UploadFile } from './interface';
 
 export function T() {
   return true;

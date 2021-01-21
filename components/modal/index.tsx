@@ -1,11 +1,12 @@
-import OriginModal, { ModalFuncProps, destroyFns } from './Modal';
+import type { ModalFuncProps } from './Modal';
+import OriginModal, { destroyFns } from './Modal';
+import type { ModalStaticFunctions } from './confirm';
 import confirm, {
   withWarn,
   withInfo,
   withSuccess,
   withError,
   withConfirm,
-  ModalStaticFunctions,
   globalConfig,
 } from './confirm';
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import RcSlider, { Range as RcRange, Handle as RcHandle } from 'rc-slider';
 import classNames from 'classnames';
-import { TooltipPlacement } from '../tooltip';
+import type { TooltipPlacement } from '../tooltip';
 import SliderTooltip from './SliderTooltip';
 import { ConfigContext } from '../config-provider';
 
@@ -145,13 +145,13 @@ const Slider = React.forwardRef<unknown, SliderSingleProps | SliderRangeProps>(
     if (direction === 'rtl' && !restProps.vertical) {
       restProps.reverse = !restProps.reverse;
     }
-  
+
     // extrack draggableTrack from range={{ ... }}
     let draggableTrack: boolean | undefined;
     if (typeof range === 'object') {
       draggableTrack = range.draggableTrack;
     }
-  
+
     if (range) {
       return (
         <RcRange

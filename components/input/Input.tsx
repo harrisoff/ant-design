@@ -1,14 +1,16 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
-import Group from './Group';
-import Search from './Search';
-import TextArea from './TextArea';
-import Password from './Password';
-import { Omit, LiteralUnion } from '../_util/type';
+import type Group from './Group';
+import type Search from './Search';
+import type TextArea from './TextArea';
+import type Password from './Password';
+import type { Omit, LiteralUnion } from '../_util/type';
 import ClearableLabeledInput, { hasPrefixSuffix } from './ClearableLabeledInput';
-import { ConfigConsumer, ConfigConsumerProps, DirectionType } from '../config-provider';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import type { ConfigConsumerProps, DirectionType } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
+import type { SizeType } from '../config-provider/SizeContext';
+import SizeContext from '../config-provider/SizeContext';
 import devWarning from '../_util/devWarning';
 
 export interface InputFocusOptions extends FocusOptions {

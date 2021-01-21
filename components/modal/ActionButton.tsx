@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Button from '../button';
-import { LegacyButtonType, ButtonProps, convertLegacyProps } from '../button/button';
+import type { LegacyButtonType, ButtonProps } from '../button/button';
+import { convertLegacyProps } from '../button/button';
 
 export interface ActionButtonProps {
   type?: LegacyButtonType;

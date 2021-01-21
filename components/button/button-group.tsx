@@ -1,7 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { SizeType } from '../config-provider/SizeContext';
-import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
+import type { SizeType } from '../config-provider/SizeContext';
+import type { ConfigConsumerProps } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
 import UnreachableException from '../_util/unreachableException';
 
 export interface ButtonGroupProps {

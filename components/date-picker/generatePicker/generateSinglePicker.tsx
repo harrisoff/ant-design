@@ -4,22 +4,17 @@ import CalendarOutlined from '@ant-design/icons/CalendarOutlined';
 import ClockCircleOutlined from '@ant-design/icons/ClockCircleOutlined';
 import CloseCircleFilled from '@ant-design/icons/CloseCircleFilled';
 import RCPicker from 'rc-picker';
-import { PickerMode } from 'rc-picker/lib/interface';
-import { GenerateConfig } from 'rc-picker/lib/generate/index';
+import type { PickerMode } from 'rc-picker/lib/interface';
+import type { GenerateConfig } from 'rc-picker/lib/generate/index';
 import enUS from '../locale/en_US';
 import { getPlaceholder } from '../util';
 import devWarning from '../../_util/devWarning';
-import { ConfigContext, ConfigConsumerProps } from '../../config-provider';
+import type { ConfigConsumerProps } from '../../config-provider';
+import { ConfigContext } from '../../config-provider';
 import LocaleReceiver from '../../locale-provider/LocaleReceiver';
 import SizeContext from '../../config-provider/SizeContext';
-import {
-  PickerProps,
-  PickerLocale,
-  PickerDateProps,
-  PickerTimeProps,
-  getTimeProps,
-  Components,
-} from '.';
+import type { PickerProps, PickerLocale, PickerDateProps, PickerTimeProps } from '.';
+import { getTimeProps, Components } from '.';
 
 export default function generatePicker<DateType>(generateConfig: GenerateConfig<DateType>) {
   type DatePickerProps = PickerProps<DateType>;

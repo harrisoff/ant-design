@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { UploadRequestOption as RcCustomRequestOptions } from 'rc-upload/lib/interface';
-import { ProgressProps } from '../progress';
+import type * as React from 'react';
+import type { UploadRequestOption as RcCustomRequestOptions } from 'rc-upload/lib/interface';
+import type { ProgressProps } from '../progress';
 
 export type UploadFileStatus = 'error' | 'success' | 'done' | 'uploading' | 'removed';
 

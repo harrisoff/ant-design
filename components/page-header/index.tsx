@@ -3,10 +3,13 @@ import classNames from 'classnames';
 import ArrowLeftOutlined from '@ant-design/icons/ArrowLeftOutlined';
 import ArrowRightOutlined from '@ant-design/icons/ArrowRightOutlined';
 import ResizeObserver from 'rc-resize-observer';
-import { ConfigConsumer, ConfigConsumerProps, DirectionType } from '../config-provider';
-import { TagType } from '../tag';
-import Breadcrumb, { BreadcrumbProps } from '../breadcrumb';
-import Avatar, { AvatarProps } from '../avatar';
+import type { ConfigConsumerProps, DirectionType } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
+import type { TagType } from '../tag';
+import type { BreadcrumbProps } from '../breadcrumb';
+import Breadcrumb from '../breadcrumb';
+import type { AvatarProps } from '../avatar';
+import Avatar from '../avatar';
 import TransButton from '../_util/transButton';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 

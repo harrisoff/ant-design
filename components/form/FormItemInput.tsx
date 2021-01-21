@@ -5,8 +5,9 @@ import CloseCircleFilled from '@ant-design/icons/CloseCircleFilled';
 import CheckCircleFilled from '@ant-design/icons/CheckCircleFilled';
 import ExclamationCircleFilled from '@ant-design/icons/ExclamationCircleFilled';
 
-import Col, { ColProps } from '../grid/col';
-import { ValidateStatus } from './FormItem';
+import type { ColProps } from '../grid/col';
+import Col from '../grid/col';
+import type { ValidateStatus } from './FormItem';
 import { FormContext, FormItemPrefixContext } from './context';
 import ErrorList from './ErrorList';
 

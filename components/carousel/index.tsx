@@ -1,6 +1,7 @@
 import * as React from 'react';
 import debounce from 'lodash/debounce';
-import SlickCarousel, { Settings } from '@ant-design/react-slick';
+import type { Settings } from '@ant-design/react-slick';
+import SlickCarousel from '@ant-design/react-slick';
 import classNames from 'classnames';
 import { ConfigContext } from '../config-provider';
 

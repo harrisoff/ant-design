@@ -11,15 +11,12 @@ import RedoOutlined from '@ant-design/icons/RedoOutlined';
 import LeftOutlined from '@ant-design/icons/LeftOutlined';
 
 import Input from '../input';
-import {
-  ConfigConsumer,
-  ConfigConsumerProps,
-  RenderEmptyHandler,
-  DirectionType,
-} from '../config-provider';
+import type { ConfigConsumerProps, RenderEmptyHandler, DirectionType } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import devWarning from '../_util/devWarning';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import type { SizeType } from '../config-provider/SizeContext';
+import SizeContext from '../config-provider/SizeContext';
 import { replaceElement } from '../_util/reactNode';
 
 export interface CascaderOptionType {

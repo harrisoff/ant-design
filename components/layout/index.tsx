@@ -1,4 +1,5 @@
-import InternalLayout, { BasicProps, Content, Footer, Header } from './layout';
+import type { BasicProps } from './layout';
+import InternalLayout, { Content, Footer, Header } from './layout';
 import Sider from './Sider';
 
 export { BasicProps as LayoutProps } from './layout';

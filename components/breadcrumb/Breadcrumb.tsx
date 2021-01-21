@@ -6,7 +6,7 @@ import BreadcrumbSeparator from './BreadcrumbSeparator';
 import Menu from '../menu';
 import { ConfigContext } from '../config-provider';
 import devWarning from '../_util/devWarning';
-import { Omit } from '../_util/type';
+import type { Omit } from '../_util/type';
 import { cloneElement } from '../_util/reactNode';
 
 export interface Route {

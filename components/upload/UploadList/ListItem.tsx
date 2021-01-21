@@ -6,7 +6,7 @@ import DeleteOutlined from '@ant-design/icons/DeleteOutlined';
 import DownloadOutlined from '@ant-design/icons/DownloadOutlined';
 import Tooltip from '../../tooltip';
 import Progress from '../../progress';
-import {
+import type {
   ItemRender,
   UploadFile,
   UploadListProgressProps,

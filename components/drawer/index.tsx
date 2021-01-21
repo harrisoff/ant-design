@@ -4,7 +4,8 @@ import getScrollBarSize from 'rc-util/lib/getScrollBarSize';
 import CloseOutlined from '@ant-design/icons/CloseOutlined';
 import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
-import { ConfigContext, DirectionType } from '../config-provider';
+import type { DirectionType } from '../config-provider';
+import { ConfigContext } from '../config-provider';
 import { tuple } from '../_util/type';
 
 const DrawerContext = React.createContext<Drawer | null>(null);

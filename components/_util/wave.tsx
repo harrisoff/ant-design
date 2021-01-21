@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { supportRef, composeRef } from 'rc-util/lib/ref';
 import raf from './raf';
-import { ConfigConsumer, ConfigConsumerProps, CSPConfig, ConfigContext } from '../config-provider';
+import type { ConfigConsumerProps, CSPConfig } from '../config-provider';
+import { ConfigConsumer, ConfigContext } from '../config-provider';
 import { cloneElement } from './reactNode';
 
 let styleForPseudo: HTMLStyleElement | null;

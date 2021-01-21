@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import ResponsiveObserve, { ScreenMap } from '../../_util/responsiveObserve';
+import type { ScreenMap } from '../../_util/responsiveObserve';
+import ResponsiveObserve from '../../_util/responsiveObserve';
 
 function useBreakpoint(): ScreenMap {
   const [screens, setScreens] = useState<ScreenMap>({});

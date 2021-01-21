@@ -1,7 +1,7 @@
 import * as React from 'react';
 import defaultLocaleData from './default';
 import LocaleContext from './context';
-import { Locale } from '.';
+import type { Locale } from '.';
 
 export interface LocaleReceiverProps {
   componentName?: string;

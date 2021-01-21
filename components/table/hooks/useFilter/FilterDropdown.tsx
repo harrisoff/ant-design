@@ -8,9 +8,15 @@ import Checkbox from '../../../checkbox';
 import Radio from '../../../radio';
 import Dropdown from '../../../dropdown';
 import Empty from '../../../empty';
-import { ColumnType, ColumnFilterItem, Key, TableLocale, GetPopupContainer } from '../../interface';
+import type {
+  ColumnType,
+  ColumnFilterItem,
+  Key,
+  TableLocale,
+  GetPopupContainer,
+} from '../../interface';
 import FilterDropdownMenuWrapper from './FilterWrapper';
-import { FilterState } from '.';
+import type { FilterState } from '.';
 import useSyncState from '../../../_util/hooks/useSyncState';
 import { ConfigContext } from '../../../config-provider/context';
 

@@ -2,13 +2,16 @@ import * as React from 'react';
 import classNames from 'classnames';
 import ExclamationCircleFilled from '@ant-design/icons/ExclamationCircleFilled';
 import KeyCode from 'rc-util/lib/KeyCode';
-import Tooltip, { AbstractTooltipProps } from '../tooltip';
+import type { AbstractTooltipProps } from '../tooltip';
+import Tooltip from '../tooltip';
 import Button from '../button';
-import { LegacyButtonType, NativeButtonProps, convertLegacyProps } from '../button/button';
+import type { LegacyButtonType, NativeButtonProps } from '../button/button';
+import { convertLegacyProps } from '../button/button';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import defaultLocale from '../locale/default';
 import { ConfigContext } from '../config-provider';
-import { getRenderPropValue, RenderFunction } from '../_util/getRenderPropValue';
+import type { RenderFunction } from '../_util/getRenderPropValue';
+import { getRenderPropValue } from '../_util/getRenderPropValue';
 import { cloneElement } from '../_util/reactNode';
 
 export interface PopconfirmProps extends AbstractTooltipProps {

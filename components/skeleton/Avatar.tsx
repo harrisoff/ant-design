@@ -1,8 +1,10 @@
 import * as React from 'react';
 import omit from 'rc-util/lib/omit';
 import classNames from 'classnames';
-import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
-import Element, { SkeletonElementProps } from './Element';
+import type { ConfigConsumerProps } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
+import type { SkeletonElementProps } from './Element';
+import Element from './Element';
 
 export interface AvatarProps extends Omit<SkeletonElementProps, 'shape'> {
   shape?: 'circle' | 'square';

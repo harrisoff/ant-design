@@ -2,42 +2,46 @@ import * as React from 'react';
 import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
 import RcTable, { Summary } from 'rc-table';
-import { TableProps as RcTableProps, INTERNAL_HOOKS } from 'rc-table/lib/Table';
+import type { TableProps as RcTableProps } from 'rc-table/lib/Table';
+import { INTERNAL_HOOKS } from 'rc-table/lib/Table';
 import { convertChildrenToColumns } from 'rc-table/lib/hooks/useColumns';
-import Spin, { SpinProps } from '../spin';
+import type { SpinProps } from '../spin';
+import Spin from '../spin';
 import Pagination from '../pagination';
 import { ConfigContext } from '../config-provider/context';
 import usePagination, { DEFAULT_PAGE_SIZE, getPaginationParam } from './hooks/usePagination';
 import useLazyKVMap from './hooks/useLazyKVMap';
-import { Breakpoint } from '../_util/responsiveObserve';
-import {
+import type { Breakpoint } from '../_util/responsiveObserve';
+import type {
   TableRowSelection,
   GetRowKey,
   ColumnType,
-  ColumnsType,
   TableCurrentDataSource,
   SorterResult,
   Key,
   GetPopupContainer,
   ExpandableConfig,
   ExpandType,
-  TablePaginationConfig,
   SortOrder,
   TableLocale,
   TableAction,
 } from './interface';
+import { ColumnsType, TablePaginationConfig } from './interface';
 import useSelection, {
   SELECTION_ALL,
   SELECTION_INVERT,
   SELECTION_NONE,
 } from './hooks/useSelection';
-import useSorter, { getSortData, SortState } from './hooks/useSorter';
-import useFilter, { getFilterData, FilterState } from './hooks/useFilter';
+import type { SortState } from './hooks/useSorter';
+import useSorter, { getSortData } from './hooks/useSorter';
+import type { FilterState } from './hooks/useFilter';
+import useFilter, { getFilterData } from './hooks/useFilter';
 import useTitleColumns from './hooks/useTitleColumns';
 import renderExpandIcon from './ExpandIcon';
 import scrollTo from '../_util/scrollTo';
 import defaultLocale from '../locale/en_US';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import type { SizeType } from '../config-provider/SizeContext';
+import SizeContext from '../config-provider/SizeContext';
 import Column from './Column';
 import ColumnGroup from './ColumnGroup';
 import devWarning from '../_util/devWarning';
@@ -236,7 +240,12 @@ function Table<RecordType extends object = any>(props: TableProps<RecordType>) {
     }
   };
 
-  /** Controlled state in `columns` is not a good idea that makes too many code (1000+ line?) to read state out and then put it back to title render. Move these code into `hooks` but still too complex. We should provides Table props like `sorter` & `filter` to handle control in next big version. */
+  /**
+   * Controlled state in `columns` is not a good idea that makes too many code (1000+ line?) to
+   * read state out and then put it back to title render. Move these code into `hooks` but still
+   * too complex. We should provides Table props like `sorter` & `filter` to handle control in next
+   * big version.
+   */
 
   // ============================ Sorter =============================
   const onSorterChange = (

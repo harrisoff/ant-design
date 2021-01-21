@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { FormProvider as RcFormProvider } from 'rc-field-form';
-import { ValidateMessages } from 'rc-field-form/lib/interface';
+import type { ValidateMessages } from 'rc-field-form/lib/interface';
 import useMemo from 'rc-util/lib/hooks/useMemo';
 import { RenderEmptyHandler } from './renderEmpty';
-import LocaleProvider, { Locale, ANT_MARK } from '../locale-provider';
+import type { Locale } from '../locale-provider';
+import LocaleProvider, { ANT_MARK } from '../locale-provider';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import {
   ConfigConsumer,
@@ -12,10 +13,11 @@ import {
   DirectionType,
   ConfigConsumerProps,
 } from './context';
-import { SizeType, SizeContextProvider } from './SizeContext';
+import type { SizeType } from './SizeContext';
+import SizeContext, { SizeContextProvider } from './SizeContext';
 import message from '../message';
 import notification from '../notification';
-import { RequiredMark } from '../form/Form';
+import type { RequiredMark } from '../form/Form';
 
 export {
   RenderEmptyHandler,
@@ -187,6 +189,7 @@ const ProviderChildren: React.FC<ProviderChildrenProps> = props => {
 
 const ConfigProvider: React.FC<ConfigProviderProps> & {
   ConfigContext: typeof ConfigContext;
+  SizeContext: typeof SizeContext;
 } = props => {
   React.useEffect(() => {
     if (props.direction) {
@@ -218,4 +221,6 @@ const ConfigProvider: React.FC<ConfigProviderProps> & {
 
 /** @private internal usage. do not use in your production */
 ConfigProvider.ConfigContext = ConfigContext;
+ConfigProvider.SizeContext = SizeContext;
+
 export default ConfigProvider;

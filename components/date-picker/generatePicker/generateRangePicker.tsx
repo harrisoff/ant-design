@@ -5,13 +5,15 @@ import ClockCircleOutlined from '@ant-design/icons/ClockCircleOutlined';
 import CloseCircleFilled from '@ant-design/icons/CloseCircleFilled';
 import SwapRightOutlined from '@ant-design/icons/SwapRightOutlined';
 import { RangePicker as RCRangePicker } from 'rc-picker';
-import { GenerateConfig } from 'rc-picker/lib/generate/index';
+import type { GenerateConfig } from 'rc-picker/lib/generate/index';
 import enUS from '../locale/en_US';
-import { ConfigContext, ConfigConsumerProps } from '../../config-provider';
+import type { ConfigConsumerProps } from '../../config-provider';
+import { ConfigContext } from '../../config-provider';
 import SizeContext from '../../config-provider/SizeContext';
 import LocaleReceiver from '../../locale-provider/LocaleReceiver';
 import { getRangePlaceholder } from '../util';
-import { RangePickerProps, PickerLocale, getTimeProps, Components } from '.';
+import type { RangePickerProps, PickerLocale } from '.';
+import { getTimeProps, Components } from '.';
 
 export default function generateRangePicker<DateType>(
   generateConfig: GenerateConfig<DateType>,

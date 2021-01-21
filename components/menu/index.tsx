@@ -1,19 +1,26 @@
 import * as React from 'react';
-import RcMenu, { Divider, ItemGroup, MenuProps as RcMenuProps } from 'rc-menu';
+import type { MenuProps as RcMenuProps } from 'rc-menu';
+import RcMenu, { Divider, ItemGroup } from 'rc-menu';
 import classNames from 'classnames';
+import type { SubMenuProps } from './SubMenu';
 import SubMenu from './SubMenu';
+import type { MenuItemProps } from './MenuItem';
 import Item from './MenuItem';
-import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
+import type { ConfigConsumerProps } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
 import devWarning from '../_util/devWarning';
-import { SiderContext, SiderContextProps } from '../layout/Sider';
+import type { SiderContextProps } from '../layout/Sider';
+import { SiderContext } from '../layout/Sider';
 import collapseMotion from '../_util/motion';
 import { cloneElement } from '../_util/reactNode';
-import MenuContext, { MenuTheme } from './MenuContext';
+import type { MenuTheme } from './MenuContext';
+import MenuContext from './MenuContext';
 
 export { MenuItemGroupProps } from 'rc-menu';
 
 export type MenuMode = 'vertical' | 'vertical-left' | 'vertical-right' | 'horizontal' | 'inline';
 
+export type { MenuTheme, SubMenuProps, MenuItemProps };
 export interface MenuProps extends RcMenuProps {
   theme?: MenuTheme;
   inlineIndent?: number;

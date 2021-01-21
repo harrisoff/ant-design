@@ -26,6 +26,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
+        '@typescript-eslint/consistent-type-imports': 1,
         '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
         'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': 2,

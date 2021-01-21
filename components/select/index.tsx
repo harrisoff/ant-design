@@ -3,11 +3,13 @@
 import * as React from 'react';
 import omit from 'rc-util/lib/omit';
 import classNames from 'classnames';
-import RcSelect, { Option, OptGroup, SelectProps as RcSelectProps } from 'rc-select';
+import type { SelectProps as RcSelectProps } from 'rc-select';
+import RcSelect, { Option, OptGroup } from 'rc-select';
 import { OptionProps } from 'rc-select/lib/Option';
 import { ConfigContext } from '../config-provider';
 import getIcons from './utils/iconUtil';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import type { SizeType } from '../config-provider/SizeContext';
+import SizeContext from '../config-provider/SizeContext';
 
 type RawValue = string | number;
 

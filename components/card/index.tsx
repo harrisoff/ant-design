@@ -3,11 +3,12 @@ import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
 import Grid from './Grid';
 import Meta from './Meta';
-import Tabs, { TabsProps } from '../tabs';
+import type { TabsProps } from '../tabs';
+import Tabs from '../tabs';
 import Row from '../row';
 import Col from '../col';
 import { ConfigContext } from '../config-provider';
-import { Omit } from '../_util/type';
+import type { Omit } from '../_util/type';
 import SizeContext from '../config-provider/SizeContext';
 
 function getAction(actions: React.ReactNode[]) {

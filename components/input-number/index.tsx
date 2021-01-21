@@ -5,8 +5,9 @@ import UpOutlined from '@ant-design/icons/UpOutlined';
 import DownOutlined from '@ant-design/icons/DownOutlined';
 
 import { ConfigContext } from '../config-provider';
-import { Omit } from '../_util/type';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import type { Omit } from '../_util/type';
+import type { SizeType } from '../config-provider/SizeContext';
+import SizeContext from '../config-provider/SizeContext';
 
 // omitting this attrs because they conflicts with the ones defined in InputNumberProps
 export type OmitAttrs = 'defaultValue' | 'onChange' | 'size';

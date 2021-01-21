@@ -1,20 +1,16 @@
 import * as React from 'react';
-import RcTreeSelect, {
-  TreeNode,
-  SHOW_ALL,
-  SHOW_PARENT,
-  SHOW_CHILD,
-  TreeSelectProps as RcTreeSelectProps,
-} from 'rc-tree-select';
+import type { TreeSelectProps as RcTreeSelectProps } from 'rc-tree-select';
+import RcTreeSelect, { TreeNode, SHOW_ALL, SHOW_PARENT, SHOW_CHILD } from 'rc-tree-select';
 import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
-import { DefaultValueType } from 'rc-tree-select/lib/interface';
+import type { DefaultValueType } from 'rc-tree-select/lib/interface';
 import { ConfigContext } from '../config-provider';
 import devWarning from '../_util/devWarning';
-import { AntTreeNodeProps } from '../tree';
+import type { AntTreeNodeProps } from '../tree';
 import getIcons from '../select/utils/iconUtil';
 import renderSwitcherIcon from '../tree/utils/iconUtil';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import type { SizeType } from '../config-provider/SizeContext';
+import SizeContext from '../config-provider/SizeContext';
 
 type RawValue = string | number;
 

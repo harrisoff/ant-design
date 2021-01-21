@@ -1,7 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { SkeletonElementProps } from './Element';
-import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
+import type { SkeletonElementProps } from './Element';
+import type { ConfigConsumerProps } from '../config-provider';
+import { ConfigConsumer } from '../config-provider';
 
 export interface SkeletonImageProps
   extends Omit<SkeletonElementProps, 'size' | 'shape' | 'active'> {}

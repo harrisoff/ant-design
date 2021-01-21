@@ -1,9 +1,9 @@
-import { Moment } from 'moment';
+import type { Moment } from 'moment';
 import * as React from 'react';
 import DatePicker from '../date-picker';
-import { PickerTimeProps, RangePickerTimeProps } from '../date-picker/generatePicker';
+import type { PickerTimeProps, RangePickerTimeProps } from '../date-picker/generatePicker';
 import devWarning from '../_util/devWarning';
-import { Omit } from '../_util/type';
+import type { Omit } from '../_util/type';
 
 const { TimePicker: InternalTimePicker, RangePicker: InternalRangePicker } = DatePicker;
 

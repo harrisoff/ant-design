@@ -1,7 +1,8 @@
 import * as React from 'react';
-import RcTree, { TreeNode, TreeProps as RcTreeProps } from 'rc-tree';
+import type { TreeProps as RcTreeProps } from 'rc-tree';
+import RcTree, { TreeNode } from 'rc-tree';
 import classNames from 'classnames';
-import { DataNode, Key } from 'rc-tree/lib/interface';
+import type { DataNode, Key } from 'rc-tree/lib/interface';
 
 import DirectoryTree from './DirectoryTree';
 import { ConfigContext } from '../config-provider';

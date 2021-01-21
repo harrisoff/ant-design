@@ -3,16 +3,16 @@ import RcUpload from 'rc-upload';
 import classNames from 'classnames';
 import Dragger from './Dragger';
 import UploadList from './UploadList';
-import {
+import type {
   RcFile,
   ShowUploadListInterface,
-  UploadProps,
   UploadFile,
   UploadLocale,
   UploadChangeParam,
   UploadType,
   UploadListType,
 } from './interface';
+import { UploadProps } from './interface';
 import { T, fileToObject, getFileItem, removeFileItem } from './utils';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import defaultLocale from '../locale/default';

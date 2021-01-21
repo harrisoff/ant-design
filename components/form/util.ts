@@ -1,4 +1,4 @@
-import { InternalNamePath } from './interface';
+import type { InternalNamePath } from './interface';
 
 export function toArray<T>(candidate?: T | T[] | false): T[] {
   if (candidate === undefined || candidate === false) return [];

@@ -2,7 +2,8 @@ import * as React from 'react';
 import { SubMenu as RcSubMenu } from 'rc-menu';
 import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
-import MenuContext, { MenuContextProps } from './MenuContext';
+import type { MenuContextProps } from './MenuContext';
+import MenuContext from './MenuContext';
 import { isValidElement } from '../_util/reactNode';
 
 interface TitleEventEntity {

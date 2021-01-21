@@ -3,11 +3,8 @@ import classNames from 'classnames';
 import { ConfigContext } from '../config-provider';
 import RowContext from './RowContext';
 import { tuple } from '../_util/type';
-import ResponsiveObserve, {
-  Breakpoint,
-  ScreenMap,
-  responsiveArray,
-} from '../_util/responsiveObserve';
+import type { Breakpoint, ScreenMap } from '../_util/responsiveObserve';
+import ResponsiveObserve, { responsiveArray } from '../_util/responsiveObserve';
 
 const RowAligns = tuple('top', 'middle', 'bottom', 'stretch');
 const RowJustify = tuple('start', 'end', 'center', 'space-around', 'space-between');

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import RcTooltip from 'rc-tooltip';
-import { TooltipProps as RcTooltipProps } from 'rc-tooltip/lib/Tooltip';
+import type { TooltipProps as RcTooltipProps } from 'rc-tooltip/lib/Tooltip';
 import classNames from 'classnames';
-import { placements as Placements } from 'rc-tooltip/lib/placements';
+import type { placements as Placements } from 'rc-tooltip/lib/placements';
 import getPlacements, { AdjustOverflow, PlacementsConfig } from './placements';
 import { cloneElement, isValidElement } from '../_util/reactNode';
 import { ConfigContext } from '../config-provider';
-import { PresetColorType, PresetColorTypes } from '../_util/colors';
-import { LiteralUnion } from '../_util/type';
+import type { PresetColorType } from '../_util/colors';
+import { PresetColorTypes } from '../_util/colors';
+import type { LiteralUnion } from '../_util/type';
 
 export { AdjustOverflow, PlacementsConfig };
 

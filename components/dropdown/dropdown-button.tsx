@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import EllipsisOutlined from '@ant-design/icons/EllipsisOutlined';
 
 import Button from '../button';
-import { ButtonHTMLType } from '../button/button';
-import { ButtonGroupProps } from '../button/button-group';
+import type { ButtonHTMLType } from '../button/button';
+import type { ButtonGroupProps } from '../button/button-group';
 import { ConfigContext } from '../config-provider';
-import Dropdown, { DropDownProps } from './dropdown';
+import type { DropDownProps } from './dropdown';
+import Dropdown from './dropdown';
 
 const ButtonGroup = Button.Group;
 

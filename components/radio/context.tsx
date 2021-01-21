@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { RadioGroupContextProps } from './interface';
+import type { RadioGroupContextProps } from './interface';
 
 const RadioGroupContext = React.createContext<RadioGroupContextProps | null>(null);
 
